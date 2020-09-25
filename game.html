@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script defer src=./game.js></script> 
+        <link rel="stylesheet" type="text/css" href="./reset.css">
+        <link rel="stylesheet" type="text/css" href="game.css">
+        <title>Game</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <!-- game -->
+            <header class="game-header">
+                <!-- menu options -->
+                <div class="menu-container">
+                    Menu
+                     <ul class="menu">
+                        <li class="save">Save</li>
+                        <li class="export">Export save</li>
+                        <li>
+                            Import save <input class="import" type="file" name="filename">
+                        </li>
+                        <li>Load</li>
+                        <li>Achievements</li>
+                    </ul>
+               </div>
+                <img class="counter-icon" src="./assets/grin.png"></img> 
+                <p class="counter-value">0</p>                 
+                <img class="info-icon" src="./assets/info.svg"></img>
+            </header>
+
+            <main class="game-main">
+                <img class="grin-icon" src="./assets/grin.png"></img>
+            </main>
+
+            <footer class="game-footer">
+                <img class="shopcart-icon" src="./assets/shopcart.svg"></img>
+            </footer>
+
+            <!-- shop -->
+            <div class="shop-overlay">
+                <div class="shop-header">
+                    <img class="counter-icon" src="./assets/grin.png"></img> 
+                    <p class="counter-value">0</p>                 
+                </div>
+                <div class="shop-main">
+                    <div class="upgrade-row">
+                        <div class="upgrade" id="upgrade1">
+                            <p class="cost">100</p>
+                            <img class="upgrade_upsidedown_grin" src="./assets/upsidedown_grin.png"></img> 
+                            <p id="detail-1">This emoji give you the power of two dollars per click!</p>
+                        </div>
+                        <div class="upgrade" id="upgrade2">
+                            <p class="cost">300</p>
+                            <img class="rofl" src="./assets/rofl.png"></img>
+                            <p id="detail-2">"you laughed too hard on a cat meme"</p>
+                        </div>
+                    
+                        <div class="upgrade" id="upgrade3">
+                            <p class="cost">625</p>
+                            <img class="thonk" src="./assets/thonk.png"></img> 
+                            <p id="detail-3">"Now, why won't my potatoes go here? THONK"</p>
+                        </div>
+                    
+                    <div class="upgrade-row">
+                        <div class="upgrade">e</div>
+                        <div class="upgrade">f</div>
+                    </div>
+                    
+                </div>
+                <div class="shop-footer">
+                    <img class="exit-shop-icon" src="./assets/exitshop.svg"></img>
+                </div>
+            </div>
+        </div>
+        <!-- Help -->
+        <div class="help-overlay"> 
+            <div class="help-header">
+                <h2>Help</h2>
+                <p>
+                If this is your first time playing 
+                an idle game, all you have to do is click the emoji in the middle to gain money! The more money you get, the more emojis you can buy! Your goal is to collect every emoji in this idle game!   
+                </p>
+            </div>
+            <div class="help-main">
+                <img class="exit-help-icon" src="./assets/exitshop.svg"></img>
+            </div>
+        </div>
+    </body>
+</html>

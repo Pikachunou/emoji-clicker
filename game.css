@@ -1,0 +1,165 @@
+body {
+    font-family: sans-serif;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-icon {
+    height: 20px;
+    margin-left: auto;
+}
+
+.game-header {
+    display:flex;
+    width: 100%;
+}
+
+.game-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.grin-icon {
+    height: 200px;
+    width: 200px;
+    user-select: none;
+}
+
+.grin-icon:hover:not(:active) {
+    height: 250px;
+    width: 250px;
+}
+
+.game-footer {
+    margin-right: auto;
+}
+
+.shopcart-icon {
+    width: 25px;
+}
+
+.shopcart-icon:before{
+    content: "Shop"
+}
+
+.counter-icon {
+    height: 20px;
+    width: 20px;
+    padding-left: 20px;
+}
+
+.counter-value {
+    padding-left: 10px;
+}
+
+.menu-container {
+    border: 1px solid black;
+}
+
+.menu {
+    display: none;
+    transition: .5s;
+}
+
+.menu > *:hover {
+background: lightgray
+}
+input[type="file"]{
+    color: transparent; /*text will be there but not visible*/
+}
+
+/* shop */
+.shop-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    flex-direction: column;
+    display: none;
+    background: gray;
+}
+
+.shop-header {
+    display: flex;
+    align-items: center;
+}
+
+.shop-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upgrade-row {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.upgrade {
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    background: red;
+    border: 1px solid black;
+}
+
+.bought {
+    background-color: lightgreen;
+}
+
+.shop-footer {
+    
+}
+
+
+.upgrade_upsidedown_grin {
+    height: 100px;
+    width: 100px;
+}
+
+.rofl {
+    height: 100px;
+    width: 100px;
+}
+
+#detail-2 {
+    font-style: italic;
+}
+
+/* Help */
+.help-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: gray;
+    display: none;
+}
+
+.help-header {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.help-header h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.help-main {
+    text-align: center;
+}
+
+.thonk {
+    height: 100px;
+    width: 100px;
+}
