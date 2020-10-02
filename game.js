@@ -4,19 +4,19 @@ let upgradesBought = []
 
 function init(){ 
     // click
-    document.querySelector(".grin-icon").addEventListener("click", clickEmoji)
+    document.querySelector(".grin").addEventListener("click", clickEmoji)
 
     // data
     document.querySelector(".export").addEventListener("click", exportData)
     document.querySelector(".import").addEventListener("change", importData)
 
     // shop
-    document.querySelector(".shopcart-icon").addEventListener("click", showShop)
-    document.querySelector(".exit-shop-icon").addEventListener("click", hideShop)
+    document.querySelector(".shopcart").addEventListener("click", showShop)
+    document.querySelector(".exit-shop").addEventListener("click", hideShop)
 
     // Info
-    document.querySelector(".info-icon").addEventListener("click", showInfo)
-    document.querySelector(".exit-help-icon").addEventListener("click", hideInfo)
+    document.querySelector(".info").addEventListener("click", showInfo)
+    document.querySelector(".exit-help").addEventListener("click", hideInfo)
 
     // Menu
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
@@ -102,7 +102,6 @@ init()
 /* Help functions */
 function showInfo() {
     document.querySelector(".help-overlay").style.display = "flex"
-    console.log("")
 }
 
 function hideInfo() {

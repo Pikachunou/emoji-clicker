@@ -3,15 +3,28 @@ body {
 }
 
 .page-container {
+    box-sizing: border-box;
     min-height: 100vh;
+    padding: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.info-icon {
-    height: 20px;
+.emoji {
+    user-select: none;
+}
+
+.info {
+    height: 50px;
+    width: 50px;
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #515151;
 }
 
 .game-header {
@@ -25,33 +38,25 @@ body {
     align-items: center;
 }
 
-.grin-icon {
-    height: 200px;
-    width: 200px;
+.grin {
+    font-size: 200px;
     user-select: none;
 }
 
-.grin-icon:hover:not(:active) {
-    height: 250px;
-    width: 250px;
+.grin:hover:not(:active) {
+    font-size: 250px;
 }
 
 .game-footer {
     margin-right: auto;
 }
 
-.shopcart-icon {
-    width: 25px;
+.shopcart {
+    font-size: 25px;
 }
 
-.shopcart-icon:before{
-    content: "Shop"
-}
-
-.counter-icon {
-    height: 20px;
-    width: 20px;
-    padding-left: 20px;
+.counter {
+    font-size: 30px;
 }
 
 .counter-value {
@@ -59,6 +64,7 @@ body {
 }
 
 .menu-container {
+    height: min-content;
     border: 1px solid black;
 }
 
@@ -76,9 +82,13 @@ input[type="file"]{
 
 /* shop */
 .shop-overlay {
+    box-sizing: border-box;
     height: 100vh;
     width: 100vw;
+    padding: 20px;
     position: fixed;
+    top: 0;
+    left: 0;
     flex-direction: column;
     display: none;
     background: gray;
@@ -118,15 +128,14 @@ input[type="file"]{
     
 }
 
-
-.upgrade_upsidedown_grin {
-    height: 100px;
-    width: 100px;
+.exit-shop, .exit-help {
+    font-size: 50px;
 }
 
-.rofl {
-    height: 100px;
-    width: 100px;
+.upgrade-icon {
+    margin: 40px 0px;
+    font-size: 5vw;
+    text-align: center;
 }
 
 #detail-2 {
@@ -135,18 +144,20 @@ input[type="file"]{
 
 /* Help */
 .help-overlay {
+    box-sizing: border-box;
     height: 100vh;
     width: 100vw;
+    padding: 20px;
     position: fixed;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    top: 0;
+    left: 0;
     background: gray;
     display: none;
 }
 
 .help-header {
     width: 50%;
+    margin: 10% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -156,10 +167,4 @@ input[type="file"]{
     font-size: 36px;
 }
 .help-main {
-    text-align: center;
-}
-
-.thonk {
-    height: 100px;
-    width: 100px;
 }
