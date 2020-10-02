@@ -1,3 +1,5 @@
+import addConfetti,  { confettiParams } from "./confetti.js"
+
 let money = 0
 let multiplier = 1
 let upgradesBought = []
@@ -20,6 +22,7 @@ function init(){
 
     // Menu
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
+    document.querySelector(".party-time").addEventListener("click", () => confettiParams.enabled = !confettiParams.enabled)
 
     //upgrade  
     document.querySelectorAll(".upgrade").forEach(
@@ -49,6 +52,9 @@ function clickEmoji(){
 }
 
 function render(){
+    if (confettiParams.enabled) {
+        addConfetti()
+    }
     document.querySelectorAll(".counter-value").forEach(counter => counter.innerText = money)
 }
 

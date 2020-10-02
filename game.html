@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script defer src=./game.js></script> 
+        <script defer type="module" src=./game.js></script> 
+        <script defer type="module" src=./confetti.js></script> 
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="./reset.css">
         <link rel="stylesheet" type="text/css" href="game.css">
@@ -9,6 +10,7 @@
     </head>
     <body>
         <div class="page-container">
+            <canvas id="confetti"></canvas>
             <!-- game -->
             <header class="game-header">
                 <!-- menu options -->
@@ -22,6 +24,7 @@
                         </li>
                         <li>Load</li>
                         <li>Achievements</li>
+                        <li class="party-time">Party Time!</li>
                     </ul>
                </div>
                 <p class="counter emoji">😄</i> 
