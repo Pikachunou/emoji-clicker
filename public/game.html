@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Description" content="Voongdev's emoji clicker! Click the emojis to earn money and buy upgrades">
+        <script defer type="module" src=./game.js></script> 
+        <script defer type="module" src=./confetti.js></script> 
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./reset.css">
+        <link rel="stylesheet" type="text/css" href="game.css">
+        <title>Game</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <canvas id="confetti"></canvas>
+            <!-- game -->
+            <header class="game-header">
+                <!-- menu options -->
+                <div class="menu-container">
+                    Menu
+                     <ul class="menu">
+                        <li class="save">Save</li>
+                        <li class="export">Export save</li>
+                        <li>
+                            Import save <input class="import" type="file" name="filename">
+                        </li>
+                        <li>Load</li>
+                        <li>Achievements</li>
+                        <li class="party-time">Party Time!</li>
+                    </ul>
+               </div>
+                <p class="counter emoji">😄</i> 
+                <p class="counter-value">0</p>
+                <p class="emoji info">❕</p>
+            </header>
+
+            <main class="game-main">
+                <p class="emoji grin">😄</i>
+            </main>
+
+            <footer class="game-footer">
+                <p class="emoji shopcart">Shopcart 🛒</i>
+            </footer>
+
+            <!-- shop -->
+            <div class="shop-overlay">
+                <div class="shop-header">
+                    <p class="emoji counter">😄</i> 
+                    <p class="counter-value">0</p>                 
+                </div>
+                <div class="shop-main">
+                    <div class="upgrade-row">
+                        <div class="upgrade" id="upgrade1">
+                            <p class="cost">100</p>
+                            <p class="upgrade-icon upsidedown_grin">🙃</i> 
+                            <p id="detail-1">This emoji give you the power of two dollars per click!</p>
+                        </div>
+                        <div class="upgrade" id="upgrade2">
+                            <p class="cost">300</p>
+                            <p class="upgrade-icon laugh">😂</i>
+                            <p id="detail-2">"you laughed too hard on a cat meme"</p>
+                        </div>
+                    
+                        <div class="upgrade" id="upgrade3">
+                            <p class="cost">625</p>
+                            <p class="upgrade-icon rofl">🤣</i> 
+                            <p id="detail-3">"Now, why won't my potatoes go here? THONK"</p>
+                        </div>
+                    </div>
+                    <div class="upgrade-row">
+                        <div class="upgrade">e</div>
+                        <div class="upgrade">f</div>
+                    </div>
+                </div>
+                <div class="shop-footer">
+                    <p class="emoji exit-shop">🔙</i>
+                </div>
+            </div>
+        </div>
+        <!-- Help -->
+        <div class="help-overlay"> 
+            <div class="help-header">
+                <h2>Help</h2>
+                <p>
+                If this is your first time playing 
+                an idle game, all you have to do is click the emoji in the middle to gain money! The more money you get, the more emojis you can buy! Your goal is to collect every emoji in this idle game!   
+                </p>
+            </div>
+            <div class="help-main">
+                <p class="emoji exit-help">🔙</i>
+            </div>
+        </div>
+    </body>
+</html>

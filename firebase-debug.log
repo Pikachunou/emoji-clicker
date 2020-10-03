@@ -1,0 +1,39 @@
+[debug] [2020-10-03T20:46:19.233Z] ----------------------------------------------------------------------
+[debug] [2020-10-03T20:46:19.241Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\orang\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-10-03T20:46:19.242Z] CLI Version:   8.11.2
+[debug] [2020-10-03T20:46:19.242Z] Platform:      win32
+[debug] [2020-10-03T20:46:19.242Z] Node Version:  v12.18.4
+[debug] [2020-10-03T20:46:19.252Z] Time:          Sat Oct 03 2020 13:46:19 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-10-03T20:46:19.254Z] ----------------------------------------------------------------------
+[debug] [2020-10-03T20:46:19.255Z] 
+[debug] [2020-10-03T20:46:19.328Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-03T20:46:19.330Z] > authorizing via signed-in user
+[debug] [2020-10-03T20:46:19.331Z] [iam] checking project emoji-clicker-34be7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-10-03T20:46:19.344Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/emoji-clicker-34be7:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-10-03T20:46:19.737Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 03 Oct 2020 20:46:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=57","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-03T20:46:19.754Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/emoji-clicker-34be7  
+ 
+[debug] [2020-10-03T20:46:19.984Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 03 Oct 2020 20:46:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'emoji-clicker-34be7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-10-03T20:46:20.123Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/emoji-clicker-34be7/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-10-03T20:46:20.859Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 03 Oct 2020 20:46:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[emoji-clicker-34be7]: beginning deploy... 
+[info] i  hosting[emoji-clicker-34be7]: found 288 files in . 
+[debug] [2020-10-03T20:46:21.913Z] [hosting] hash cache [] not populated
+[debug] [2020-10-03T20:47:37.103Z] [hosting] hash cache [] stored for 288 files
+[debug] [2020-10-03T20:47:37.119Z] [hosting][hash queue][FINAL] {"max":73542,"min":166,"avg":2191.902777777778,"active":0,"complete":288,"success":288,"errored":0,"retried":0,"total":288,"elapsed":75201}
+[debug] [2020-10-03T20:47:37.121Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/emoji-clicker-34be7/versions/8982f7024e5b3313:populateFiles  
+ <request body omitted>
+[debug] [2020-10-03T20:47:37.994Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 03 Oct 2020 20:47:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-03T20:47:38.528Z] [hosting][populate queue][FINAL] {"max":989,"min":989,"avg":989,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1481}
+[debug] [2020-10-03T20:47:38.530Z] [hosting] uploads queued: 265
+[debug] [2020-10-03T20:47:42.054Z] [hosting][upload] {"max":0,"min":9999999999,"avg":0,"active":200,"complete":0,"success":0,"errored":0,"retried":0,"total":265,"elapsed":4056}
+[debug] [2020-10-03T20:47:50.242Z] [uploadQueue] Retrying task 5e4172b04132b3badcb9c6177d86c9680cb80a258a8e3b34db8e96d653c7f121
+[debug] [2020-10-03T20:47:50.267Z] [uploadQueue] Retrying task b71e5e60fea52d8b6c59c2f4bdbbf6ebd7dd55d97a4bdb289bcb162337a46ed6
+[debug] [2020-10-03T20:47:50.270Z] [uploadQueue] Retrying task b1419c21ae1418a0a3b5bbd0a252c48f265447cdb19d31333028cd7680232821
+[debug] [2020-10-03T20:47:50.310Z] [uploadQueue] Retrying task 3ab36a69fa23679d807de273f9560f4191a1d3a40a7f2f62d28cdd5ee879d4f7

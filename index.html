@@ -2,21 +2,73 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- https://stackoverflow.com/questions/14007080/firebase-chrome-content-security-policy-settings -->
+    <meta http-equiv="Content-Security-Policy" content_security_policy="script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content_security_policy="script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'">
+
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <title>Emoji-Clicker</title>
   </head>
   <body>
-        <h1>Emoji Clicker</h1>
-        <image src="./assets/smileshower.gif"></image>
-        <a href="./game.html">
-            <button class="home-btn">Create new Game</button>
-        </a>
-        <button class="home-btn">Load Game</button>
-    <!-- You can also require other files to run in this process -->
+    <h1>Login</h1>
+    <image src="./assets/smileshower.gif"></image>
+    <div className="login-page">
+      <h1>Login Page</h1>
+      <form id="login">
+        <label for="login-email">Email address</label>
+        <input type="email" id="login-email" placeholder="Enter email" />
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="Password" />
+
+        <div className="login-btn">
+          <button type="submit">
+            Log in
+          </button>
+        </div>
+      </form>
+      <form id="signup">
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" placeholder="Enter email" />
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="Password" />
+
+        <div className="submit-btn">
+          <button type="submit">
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
     <script src="./renderer.js"></script>
+
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyARbgUNl9oWHFNkG6sjh_c33WhJ6bLkTT8",
+        authDomain: "emoji-clicker-34be7.firebaseapp.com",
+        databaseURL: "https://emoji-clicker-34be7.firebaseio.com",
+        projectId: "emoji-clicker-34be7",
+        storageBucket: "emoji-clicker-34be7.appspot.com",
+        messagingSenderId: "1056690969099",
+        appId: "1:1056690969099:web:d39b7c7a4972906a34c50e",
+        measurementId: "G-VW3W2QS0N1"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./index.js"></script>
   </body>
 </html>
