@@ -22,24 +22,37 @@ function init(){
 
     // Menu
     document.querySelector(".menu-container").addEventListener("click", toggleMenu)
-    document.querySelector(".party-time").addEventListener("click", () => confettiParams.enabled = !confettiParams.enabled)
 
     //upgrade  
     document.querySelectorAll(".upgrade").forEach(
         function(upgrade) {
             upgrade.addEventListener("click", function(event){
-                const cost = event.currentTarget.querySelector(".cost").innerText
                 const upgradeName = event.currentTarget.getAttribute('id')
-                console.log(upgradeName)
-                console.log(upgradesBought)
-                console.log(cost)
+                const cost = event.currentTarget.querySelector(".cost").innerText
+                if (upgradesBought.includes(upgradeName)&&upgradeName==="upgrade4") {
+                    confettiParams.enabled = !confettiParams.enabled;
+                    if (upgrade.classList.contains("--active")){
+                        upgrade.classList.remove("--active")
+                    }
+                    else{
+                        upgrade.classList.add("--active")
+                    }
+                }
                 if (money >= cost && !upgradesBought.includes(upgradeName)) {
                     money = money - cost 
                     upgradesBought.push(upgradeName) 
-                    multiplier = multiplier * 2
+                    switch (upgradeName) { 
+                        case "upgrade1": multiplier = multiplier * 2;break
+                        case "upgrade2": multiplier = multiplier * 2;break
+                        case "upgrade3": multiplier = multiplier * 2;break
+                        case "upgrade4": confettiParams.enabled = true;break
+                    }
                     document.querySelector(`#${upgradeName}`).classList.add("bought")
                     render()
                 }
+                console.log(upgradeName)
+                console.log(upgradesBought)
+                console.log(cost)
             })
         }
     )

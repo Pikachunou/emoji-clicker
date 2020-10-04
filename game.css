@@ -177,3 +177,10 @@ input[type="file"]{
     left: 0;
     z-index: -1;
 }
+
+#upgrade4.--active >.cost::after {
+    content: "ON";
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+}
