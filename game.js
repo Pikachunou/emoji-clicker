@@ -113,3 +113,6 @@ function showInfo() {
 function hideInfo() {
     document.querySelector(".help-overlay").style.display = "none"
 }
+
+mainWindow = new BrowserWindow({width: 640, height: 360})
+mainWindow.setMenuBarVisibility(false)

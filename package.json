@@ -20,7 +20,8 @@
   "build": {
     "appId": "com.electron.app",
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "./assets/cool-emoji.png"
     },
     "portable": {
       "unicode": false,
