@@ -1,0 +1,186 @@
+body {
+    font-family: sans-serif;
+}
+
+.page-container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emoji {
+    user-select: none;
+}
+
+.info {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 40px;
+    background: #515151;
+}
+
+.game-header {
+    display:flex;
+    width: 100%;
+}
+
+.game-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.grin {
+    font-size: 200px;
+    user-select: none;
+}
+
+.grin:hover:not(:active) {
+    font-size: 250px;
+}
+
+.game-footer {
+    margin-right: auto;
+}
+
+.shopcart {
+    font-size: 25px;
+}
+
+.counter {
+    font-size: 30px;
+}
+
+.counter-value {
+    padding-left: 10px;
+}
+
+.menu-container {
+    height: min-content;
+    border: 1px solid black;
+}
+
+.menu {
+    display: none;
+    transition: .5s;
+}
+
+.menu > *:hover {
+background: lightgray
+}
+input[type="file"]{
+    color: transparent; /*text will be there but not visible*/
+}
+
+/* shop */
+.shop-overlay {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    display: none;
+    background: gray;
+}
+
+.shop-header {
+    display: flex;
+    align-items: center;
+}
+
+.shop-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upgrade-row {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+.upgrade {
+    width: 100px;
+    margin: 10px;
+    padding: 20px;
+    background: red;
+    border: 1px solid black;
+}
+
+.bought {
+    background-color: lightgreen;
+}
+
+.shop-footer {
+    
+}
+
+.exit-shop, .exit-help {
+    font-size: 50px;
+}
+
+.upgrade-icon {
+    margin: 40px 0px;
+    font-size: 5vw;
+    text-align: center;
+}
+
+#detail-2 {
+    font-style: italic;
+}
+
+/* Help */
+.help-overlay {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: gray;
+    display: none;
+}
+
+.help-header {
+    width: 50%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.help-header h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.help-main {
+}
+
+#confetti {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#upgrade4.--active >.cost::after {
+    content: "ON";
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+}
