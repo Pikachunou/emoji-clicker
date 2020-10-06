@@ -2,17 +2,20 @@
   "multiplier": {
     "cost": "100",
     "icon": "🙃",
-    "desc": "This emoji give you the power of two dollars per click!"
+    "desc": "This emoji give you the power of two dollars per click!",
+    "effect": "2"
   },
   "multiplier2": {
     "cost": "300",
     "icon": "😂",
-    "desc": "you laughed too hard on a cat meme"
+    "desc": "you laughed too hard on a cat meme",
+    "effect": "2"
   },
   "multiplier3": {
     "cost": "625",
     "icon": "🤣",
-    "desc": "you laughed too too hard on a cat meme"
+    "desc": "you laughed too too hard on a cat meme",
+    "effect": "2"
   },
   "party": {
     "cost": "500",

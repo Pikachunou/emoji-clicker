@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from './Menu'
 
 
-function Main({ handleEmojiClick, goBack, openHelp, openShop, money }) {
+function Main({ handleEmojiClick, money, openHelp, openShop }) {
   
   return (
     <div className="page-container">
