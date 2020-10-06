@@ -12,19 +12,15 @@ function Game() {
     let [multiplier, setMultiplier] = useState(1)
     let [upgrades, setUpgrades] = useState(upgradeData)
 
-    function searchObject(_object,term){
-        var query = new RegExp(term,'i');
-        return Object.keys(_object).filter(function(q){return query.test(q)})
-    }
-
     useEffect(() => {
-        const names = searchObject(upgrades, "^multiplier.*$")
         let tempMultiplier = 0
-        for (let i = 0; i < names.length; i++) {
-            const upgrade = upgrades[names[i]]
-            const { effect, owned } = upgrade
+
+        for (let name of Object.keys(upgrades)) {
+            const { effect, owned } = upgrades[name]
             if (owned) {
-                tempMultiplier += Number(effect)
+                if (name.includes("multiplier")) {
+                    tempMultiplier += Number(effect)
+                }
             }
         }
 
