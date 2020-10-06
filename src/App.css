@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: sans-serif;
+}
+
+.emoji {
+  user-select: none;
+}
+
+/************************* =Home.js *************************/
+.home-img {
+  margin: 3%;
+}
+
+.home-btn {
+  height: 50px;
+  width: 150px;
+  margin-bottom: 1%;
+  border: none;
+  background: #30C223;
+}
+
+.home-btn:hover {
+  cursor: pointer;
+}
+
+
+/************************* =Game.js *************************/
+.page-container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 40px;
+  background: #515151;
 }
 
-.App-link {
-  color: #61dafb;
+.game-header {
+  display:flex;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.grin {
+  font-size: 200px;
+  user-select: none;
+}
+
+.grin:hover:not(:active) {
+  font-size: 250px;
+}
+
+.game-footer {
+  margin-right: auto;
+}
+
+.shopcart {
+  font-size: 25px;
+}
+
+.counter {
+  font-size: 30px;
+}
+
+.counter-value {
+  padding-left: 10px;
+}
+
+.menu-container {
+  height: min-content;
+  border: 1px solid black;
+}
+
+.menu {
+  transition: .5s;
+}
+
+.menu > *:hover {
+background: lightgray
+}
+input[type="file"]{
+  color: transparent; /*text will be there but not visible*/
+}
+
+/************************* =Shop.js *************************/
+.shop-overlay {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  background: gray;
+}
+
+.shop-header {
+  display: flex;
+  align-items: center;
+}
+
+.shop-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upgrades {
+  display: flex;
+  flex-wrap: wrap;
+}
+.upgrade {
+  flex-basis: 47%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  background: red;
+  border: 1px solid black;
+}
+
+.upgrade.bought {
+  background-color: lightgreen;
+}
+
+.shop-footer {
+  
+}
+
+.exit-shop, .exit-help {
+  font-size: 50px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#detail-2 {
+  font-style: italic;
+}
+
+#upgrade4.--active >.cost::after {
+  content: "ON";
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+/************************* =Help.js *************************/
+.help-overlay {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: gray;
+}
+
+.help-header {
+  width: 50%;
+  margin: 10% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.help-header h2 {
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+.help-main {
+}
+
+/* Confetti.js */
+
+#confetti {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
