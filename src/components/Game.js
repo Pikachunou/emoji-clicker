@@ -35,7 +35,8 @@ function Game() {
     function renderView() {
         switch (view) {
             case 'main':
-                return (
+                return (<>
+                    <Scene />
                     <Main
                         handleEmojiClick={handleEmojiClick}
                         money={money}
@@ -43,7 +44,7 @@ function Game() {
                         openShop={() => setView("shop")}
                         setMultiplier={setMultiplier}
                         setMoney={setMoney}
-                    />
+                    /></>
                 )
             case 'shop':
                 return (

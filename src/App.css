@@ -14,6 +14,10 @@
   user-select: none;
 }
 
+canvas#confetti {
+  pointer-events: none;
+}
+
 /************************* =Home.js *************************/
 .home-img {
   margin: 3%;
