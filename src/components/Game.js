@@ -13,13 +13,15 @@ function Game() {
     let [upgrades, setUpgrades] = useState(upgradeData)
 
     useEffect(() => {
-        let tempMultiplier = 0
+        let tempMultiplier = 1
 
         for (let name of Object.keys(upgrades)) {
             const { effect, owned } = upgrades[name]
             if (owned) {
                 if (name.includes("multiplier")) {
-                    tempMultiplier += Number(effect)
+                    tempMultiplier *= Number(effect)
+                } else if (name.includes("party")) {
+                    
                 }
             }
         }
